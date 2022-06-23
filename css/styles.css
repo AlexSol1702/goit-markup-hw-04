@@ -1,0 +1,394 @@
+/* bcg-hero= #2F303A 
+   accent= #2196F3
+   text= #757575
+   title= #212121
+
+    Fonts 
+
+   Raleway Bold:
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+
+   Roboto-bold
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+   Roboto-medium 
+       font-weight: 500;
+       font-size: 14px;
+       line-height: 1.14;
+   
+   */
+:root {
+    /* Color  */
+    --bcg-dark: #2F303A;
+    --bcg-light: #F5F4FA;
+    --titl-cl: #212121;
+    --txt-cl: #757575;
+    --accent: #2196F3;
+    --primery-cl: #FFFFFF;
+    --accent-second: #000000;
+    --btn-hover: #188CE8;
+
+    --card-gap: 30px;
+    --item: 3;
+}
+
+body {
+
+    color: var(--txt-cl);
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+.current,
+.nav-link.current,
+.nav-link:hover,
+.nav-link:focus,
+.contact-link:focus,
+.contact-link:hover,
+.foot-link:hover,
+.foot-link:focus {
+    color: var(--accent);
+}
+
+.contact-link:hover,
+.nav-link:hover,
+.foot-link:hover {
+    cursor: pointer;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/* Формула сетки */
+
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--card-gap) /2);
+    
+}
+
+.card-item {
+    margin: calc(var(--card-gap) / 2);
+    flex-basis: calc((100% - (var(--item)) * var(--card-gap)) / var(--item));
+    background-color: var(--primery-cl);
+}
+
+/* header */
+
+header {
+    border-bottom: 1px solid #ECECEC;
+}
+
+header>.container {
+    display: flex;
+    align-items: center;
+}
+.logotype {
+    margin-right: 93px;
+}
+.logo,
+.type {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.logo {
+    color: var(--accent);
+}
+
+.type {
+    color: var(--accent-second);
+}
+
+.nav-list,
+.contact {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav-item,
+.contact-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.nav-item:not(:last-child) {
+    margin-right: 50px;
+}
+ 
+
+.nav-link {
+    display: block;
+    color: var(--titl-cl);
+}
+.contact {
+    margin-left: auto;
+}
+.contact-item:last-child {
+    margin-left: 50px;
+}
+.contact-link {
+    display: block;
+    color: inherit;
+}
+
+/* hat */
+
+.hat {
+    background-color: var(--bcg-dark);
+    text-align: center;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+
+.hat-title {
+    color: var(--primery-cl);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+}
+
+.hat-btn {
+    color: var(--primery-cl);
+    background-color: var(--accent);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    padding: 10px 32px;
+    border-radius: 4px;
+}
+
+.hat-btn:hover,
+.filters-btn:hover {
+    background-color: var(--btn-hover);
+    cursor: pointer;
+}
+
+/* peculiarities */
+
+.peculiarities {
+    --item: 4;
+}
+
+
+.peculiarities-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--titl-cl);
+
+    margin-bottom: 10px;
+
+}
+
+/* doing */
+
+.doing {
+    padding-bottom: 94px;
+}
+.doing-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    color: var(--titl-cl);
+
+    margin-bottom: 50px;
+}
+
+
+/* team */
+
+.team {
+    --item: 4;
+    background-color: var(--bcg-light);
+}
+.team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+
+    color: var(--titl-cl);
+    margin-bottom:  50px;
+}
+
+
+.card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.card-content {
+    text-align: center;
+    padding-top: var(--card-gap);
+    padding-bottom: var(--card-gap);
+}
+.team-list-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+
+    color: var(--titl-cl);    
+}
+
+.team-list-txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.18;
+
+    margin-top: 10px;
+
+    
+}
+
+/* footer */
+
+.foot {
+    background-color: var(--bcg-dark);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.foot .logotype {
+    margin: 0;
+    padding-bottom: 20px;
+}
+.foot .type {
+    color: var(--primery-cl);
+}
+
+
+.foot-adr,
+.foot-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.foot-list>li:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.foot-adr {
+    color: var(--primery-cl);
+}
+
+.foot-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* portfolio */
+
+
+
+/* filters */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin:0 auto;
+    padding-bottom: 16px;
+    width: 610px;
+}
+.filters-item:not(:last-child) {
+    margin-right: 8px;
+}
+.filters-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+
+    color: var(--titl-cl);
+    background-color: var(--bcg-light);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px;
+}
+
+.filters-btn.current,
+.filters-btn:hover,
+.filters-btn:focus {
+    color: var(--primery-cl);
+    background-color: var(--accent);
+}
+
+/* galary */
+
+.galary {
+    padding-top: 34px;
+    
+}
+
+
+.galary-card-content {
+    padding: 20px 24px;
+} 
+ 
+.galary-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+
+    color: var(--titl-cl);
+    margin: 0;
+    
+}
+
+.galary-txt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+
+    margin-top: 4px;
+}
