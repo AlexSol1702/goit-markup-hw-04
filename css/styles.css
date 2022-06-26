@@ -32,6 +32,7 @@
     --accent-second: #000000;
     --btn-hover: #188CE8;
     --icon-cl: #AFB1B8;
+    --gr-cl: rgba(47, 48, 58, 0.4);
 
     --card-gap: 30px;
     --item: 3;
@@ -175,7 +176,7 @@ header>.container {
     display: block;
     color: inherit;
 }
-.contact-item {
+.contact-item>a {
     display: flex;
     align-items: center;
 }
@@ -198,13 +199,14 @@ header>.container {
 /* hat */
 
 .hat {
-    width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--bcg-dark);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imges/hat/Img.jpg);
+    background-image: linear-gradient(var(--gr-cl), var(--gr-cl)), url(../imges/hat/Img.jpg);
     background-position: center;    
 }
 
@@ -327,6 +329,7 @@ header>.container {
     line-height: 1.18;
 
     margin-top: 10px;
+    margin-bottom: 12px;
 }
 
 /* Разметка соцсетей */
@@ -340,7 +343,7 @@ header>.container {
 .social-link {
     display: flex;
     justify-content: center;
-    padding-top: 12px;
+    align-items: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -385,6 +388,7 @@ header>.container {
     
     color: var(--icon-cl);
     border: 1px solid var(--icon-cl);
+    border-radius: 4px;
     
 }
 .clients-link:hover,
